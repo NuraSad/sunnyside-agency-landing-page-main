@@ -1,0 +1,84 @@
+html {
+  font-size: 18px; }
+
+body {
+  margin: 0;
+  padding: 0; }
+
+.start {
+  height: 100dvh;
+  height: 100vh;
+  position: relative;
+  padding: 2rem 1rem; }
+  .start img {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1; }
+  .start #hamburger {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+    z-index: 2; }
+  .start h3 {
+    color: white;
+    font-family: "Fraunces", serif; }
+  .start h1 {
+    color: white;
+    font-family: "Fraunces", serif;
+    text-transform: uppercase;
+    margin-top: 6rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+    letter-spacing: 0.5rem; }
+  .start .arrow-icon {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%); }
+  .start nav #navbar {
+    display: none;
+    position: absolute;
+    width: 90%;
+    left: 100%;
+    z-index: 2;
+    top: 5rem;
+    list-style: none;
+    padding: 1.5rem 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .start nav #navbar.open {
+    left: 1rem; }
+  .start nav ul::before {
+    content: "";
+    z-index: 2;
+    position: absolute;
+    right: 0;
+    top: -1.5rem;
+    width: 0;
+    height: 0;
+    border-bottom: 1.5rem solid white;
+    border-right: 0px solid transparent;
+    border-left: 1.5rem solid transparent; }
+  .start nav li {
+    color: #818498;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    margin: 1rem 0; }
+  .start nav button {
+    background-color: #fad400;
+    color: black;
+    font-size: 0.8rem;
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 2rem;
+    padding: 1rem 1.8rem;
+    margin: 0.8rem 0; }
+
+/*# sourceMappingURL=style.css.map */
