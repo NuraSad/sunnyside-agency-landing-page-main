@@ -1,7 +1,7 @@
 $soft-red: hsl(7, 99%, 70%);
-$pale-soft-red: rgba(254,120,103,0.3);
+$pale-soft-red: rgba(254,120,103,0.25);
 $yellow: hsl(51, 100%, 49%);
-$pale-yellow: rgba(250,212,0,0.3);
+$pale-yellow: rgba(250,212,0,0.25);
 $dark-desaturated-cyan: hsl(167, 40%, 24%);
 $dark-blue : hsl(198, 62%, 26%);
 $dark-moderate-cyan: hsl(168, 34%, 41%);
@@ -14,14 +14,15 @@ $font-size: 18px;
 $headings-font-style: "Fraunces", serif;
 $text-font-style: "Barlow", sans-serif;
 $start-div-padding-top: 2rem;
-$start-div-padding-left: 1rem;
+$start-div-padding-left: 1.3rem;
 
 @mixin sectionHeading($color) {
     color: $color;
     font-family: $headings-font-style;
-    font-size: 2rem;
+    font-weight: 900;
+    font-size: 1.8rem;
     text-align: center;
-    margin: 4rem 0 1.5rem 0;
+    margin: 4rem 0 1.55rem 0;
 }
 
 @mixin text($color) {
@@ -30,17 +31,19 @@ $start-div-padding-left: 1rem;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
-    line-height: 2;
+    line-height: 1.65rem;
     margin: 0;
+    text-align: center;
 }
 
 @mixin learnMoreLinks {
     font-family: $headings-font-style;
     color: $very-dark-desaturated-blue;
-    font-size: 1rem;
-    font-weight: 700;
+    font-size: 0.83rem;
+    letter-spacing: 1px;
+    font-weight: 900;
     text-transform: uppercase;
-    margin: 2rem 0;
+    margin: 1.55rem 0 3rem 0;
     position: relative;
 }
 
@@ -106,9 +109,16 @@ section {
         top: 0;
         z-index: -1;
     }
+
+    .logo {
+        position: absolute;
+        top: 1.8rem;
+        left: 2rem;
+    }
+
     #hamburger {
         position: absolute;
-        top: $start-div-padding-top;
+        top: 1.8rem;
         right: $start-div-padding-left;
         z-index: 2;
     }
@@ -121,16 +131,18 @@ section {
         color: $white;
         font-family: $headings-font-style;
         text-transform: uppercase;
-        margin-top: 5rem;
+        margin-top: 6rem;
         margin-bottom: 2rem;
         text-align: center;
-        font-size: 2rem;
-        letter-spacing: 0.5rem;
+        font-size: 2.2rem;
+        font-weight: 900;
+        letter-spacing: 0.4rem;
     }
 
     .arrow-icon {
         position: absolute;
         left: 50%;
+        top: 57%;
         transform: translateX(-50%);
     }
 
@@ -138,7 +150,7 @@ section {
         #navbar {
             display: none;
             position: absolute;
-            width: 90%;
+            width: 85%;
             left: 100%;
             z-index: 2;
             top: 5rem;
@@ -152,7 +164,8 @@ section {
         }
 
         #navbar.open {
-            left:$start-div-padding-left;
+            left:50%;
+            transform: translateX(-50%);
         }
 
         ul::before {
@@ -172,13 +185,14 @@ section {
             color: $dark-grayish-blue;
             font-family: $text-font-style;
             font-weight: 600;
+            font-size: 1.1rem;
             margin: 1rem 0;
         }
 
         button {
             background-color: $yellow;
             color: $very-dark-desaturated-blue;
-            font-size: 0.8rem;
+            font-size: 0.83rem;
             font-family: $headings-font-style;
             font-weight: 700;
             text-transform: uppercase;
@@ -200,7 +214,7 @@ img {
     }
 
     p {
-        @include text($color:$very-dark-grayish-blue);
+        @include text($color:$dark-grayish-blue);
     }
 
     a {
@@ -219,7 +233,7 @@ img {
     }
 
     p {
-        @include text($color:$very-dark-grayish-blue);
+        @include text($color:$dark-grayish-blue);
     }
 
     a {
@@ -237,7 +251,7 @@ img {
     position: relative;
     height: 600px;
     justify-content: flex-end;
-    padding: 2rem 0.5rem;
+    padding: 3.5rem 1.33rem;
 
     img {
         @include backgroundImage;
@@ -245,11 +259,14 @@ img {
 
     h2 {
         @include sectionHeading($color: $dark-desaturated-cyan);
+        font-size: 1.55rem;
     }
 
     p {
         @include text($color: $dark-desaturated-cyan);
-        line-height: 1.5;
+        line-height: 1.5rem;
+        font-size: 0.88rem;
+        font-weight: 600;
     }
 }
 
@@ -257,7 +274,7 @@ img {
     position: relative;
     height: 600px;
     justify-content: flex-end;
-    padding: 2rem 0.5rem;
+    padding: 3.5rem 1.33rem;
 
     img {
         @include backgroundImage;
@@ -265,19 +282,26 @@ img {
 
     h2 {
         @include sectionHeading($color: $dark-blue);
+        font-size: 1.55rem;
     }
 
     p {
         @include text($color: $dark-blue);
-        line-height: 1.5;
+        line-height: 1.5rem;
+        font-size: 0.88rem;
+        font-weight: 600;
     }
 }
 
 #reviews {
+    display: flex;
+    flex-wrap: wrap;
+
     h3 {
         font-family: $headings-font-style;
+        font-weight: 900;
         text-transform: uppercase;
-        font-size: 1rem;
+        font-size: 0.88rem;
         margin: 4rem 1rem;
         text-align: center;
         letter-spacing: 0.2rem;
@@ -289,11 +313,126 @@ img {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @include text($color: $very-dark-grayish-blue);
+        margin-bottom: 3rem;
+
     }
 
     img {
         width: 4rem;
         height: 4rem;
         border-radius: 50%;
+        margin-bottom: 2rem;
     }
+
+    span {
+        margin-top: 2rem;
+        font-size: 1rem;
+        font-family: $headings-font-style;
+        font-weight: 900;
+        color: hsl(212, 27%, 19%)
+    }
+
+    cite {
+        font-family: $text-font-style;
+        font-weight: 600;
+        font-size: 0.78rem;
+        color: $grayish-blue;
+        font-style: normal;
+    }
+
+}
+
+#gallery {
+
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    row-gap: 0;
+
+    picture {
+        display: block;
+        margin: 0;
+        padding: 0;
+        max-width: 50%;
+        height: 100%;
+    }
+
+    source{
+        display: block;
+        height: 0;
+    }
+
+    img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-style: none;
+    }
+
+    @media screen and (min-width: 750px) {
+        picture {
+            max-width: 25%;
+        }
+      }
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(168, 44%, 70%);
+    padding-bottom: 0.8rem;
+
+    .logo{
+        margin: 3rem 0 2rem 0;
+        width: 9.4rem;
+        height: 2rem;
+    }
+
+    ul {
+        width: 80%;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 0 3rem 0;
+        padding: 0;
+    }
+
+    .logo-list {
+        margin-top: 1rem;
+        justify-content: center;
+        column-gap: 10%;
+    }
+
+    li{
+        font-size: 1rem;
+        color: hsl(167, 34%, 41%);
+        margin-left: 0;
+        font-family: $text-font-style;
+        font-weight: 600;
+    }
+
+    li:last-child{
+        margin-right: 0;
+    }
+
+    .attribution {
+        color:hsl(167, 40%, 24%);
+        font-family: $text-font-style;
+        margin: 0 0.8rem;
+        font-size: 0.7rem;
+
+        a {
+            text-decoration: none;
+            color:hsl(212, 27%, 19%);
+            font-family: $headings-font-style;
+            font-weight: 600;
+        }
+    }
+
 }

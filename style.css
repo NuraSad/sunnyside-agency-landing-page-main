@@ -8,7 +8,7 @@ body {
 
 section {
   box-sizing: border-box;
-  padding: 0 1rem;
+  padding: 0 1.3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,17 +18,21 @@ section {
   box-sizing: border-box;
   height: 516px;
   position: relative;
-  padding: 2rem 1rem; }
+  padding: 2rem 1.3rem; }
   .start img {
     width: 100%;
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1; }
+  .start .logo {
+    position: absolute;
+    top: 1.8rem;
+    left: 2rem; }
   .start #hamburger {
     position: absolute;
-    top: 2rem;
-    right: 1rem;
+    top: 1.8rem;
+    right: 1.3rem;
     z-index: 2; }
   .start h3 {
     color: white;
@@ -37,19 +41,21 @@ section {
     color: white;
     font-family: "Fraunces", serif;
     text-transform: uppercase;
-    margin-top: 5rem;
+    margin-top: 6rem;
     margin-bottom: 2rem;
     text-align: center;
-    font-size: 2rem;
-    letter-spacing: 0.5rem; }
+    font-size: 2.2rem;
+    font-weight: 900;
+    letter-spacing: 0.4rem; }
   .start .arrow-icon {
     position: absolute;
     left: 50%;
+    top: 57%;
     transform: translateX(-50%); }
   .start nav #navbar {
     display: none;
     position: absolute;
-    width: 90%;
+    width: 85%;
     left: 100%;
     z-index: 2;
     top: 5rem;
@@ -61,7 +67,8 @@ section {
     justify-content: center;
     align-items: center; }
   .start nav #navbar.open {
-    left: 1rem; }
+    left: 50%;
+    transform: translateX(-50%); }
   .start nav ul::before {
     content: "";
     z-index: 2;
@@ -77,11 +84,12 @@ section {
     color: #818498;
     font-family: "Barlow", sans-serif;
     font-weight: 600;
+    font-size: 1.1rem;
     margin: 1rem 0; }
   .start nav button {
     background-color: #fad400;
     color: #23303e;
-    font-size: 0.8rem;
+    font-size: 0.83rem;
     font-family: "Fraunces", serif;
     font-weight: 700;
     text-transform: uppercase;
@@ -97,31 +105,34 @@ img {
 #transform h2 {
   color: #23303e;
   font-family: "Fraunces", serif;
-  font-size: 2rem;
+  font-weight: 900;
+  font-size: 1.8rem;
   text-align: center;
-  margin: 4rem 0 1.5rem 0; }
+  margin: 4rem 0 1.55rem 0; }
 #transform p {
   font-family: "Barlow", sans-serif;
-  color: #5a636c;
+  color: #818498;
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
-  line-height: 2;
-  margin: 0; }
+  line-height: 1.65rem;
+  margin: 0;
+  text-align: center; }
 #transform a {
   font-family: "Fraunces", serif;
   color: #23303e;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.83rem;
+  letter-spacing: 1px;
+  font-weight: 900;
   text-transform: uppercase;
-  margin: 2rem 0;
+  margin: 1.55rem 0 3rem 0;
   position: relative; }
 #transform a::after {
   content: "";
   width: 110%;
   height: 0;
-  border-top: solid 5px rgba(250, 212, 0, 0.3);
-  border-bottom: solid 5px rgba(250, 212, 0, 0.3);
+  border-top: solid 5px rgba(250, 212, 0, 0.25);
+  border-bottom: solid 5px rgba(250, 212, 0, 0.25);
   border-radius: 8px;
   position: absolute;
   top: 70%;
@@ -132,31 +143,34 @@ img {
 #stand-out h2 {
   color: #23303e;
   font-family: "Fraunces", serif;
-  font-size: 2rem;
+  font-weight: 900;
+  font-size: 1.8rem;
   text-align: center;
-  margin: 4rem 0 1.5rem 0; }
+  margin: 4rem 0 1.55rem 0; }
 #stand-out p {
   font-family: "Barlow", sans-serif;
-  color: #5a636c;
+  color: #818498;
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
-  line-height: 2;
-  margin: 0; }
+  line-height: 1.65rem;
+  margin: 0;
+  text-align: center; }
 #stand-out a {
   font-family: "Fraunces", serif;
   color: #23303e;
-  font-size: 1rem;
-  font-weight: 700;
+  font-size: 0.83rem;
+  letter-spacing: 1px;
+  font-weight: 900;
   text-transform: uppercase;
-  margin: 2rem 0;
+  margin: 1.55rem 0 3rem 0;
   position: relative; }
 #stand-out a::after {
   content: "";
   width: 110%;
   height: 0;
-  border-top: solid 5px rgba(254, 120, 103, 0.3);
-  border-bottom: solid 5px rgba(254, 120, 103, 0.3);
+  border-top: solid 5px rgba(254, 120, 103, 0.25);
+  border-bottom: solid 5px rgba(254, 120, 103, 0.25);
   border-radius: 8px;
   position: absolute;
   top: 70%;
@@ -168,7 +182,7 @@ img {
   position: relative;
   height: 600px;
   justify-content: flex-end;
-  padding: 2rem 0.5rem; }
+  padding: 3.5rem 1.33rem; }
   #design img {
     position: absolute;
     top: 0;
@@ -179,24 +193,29 @@ img {
   #design h2 {
     color: #25564b;
     font-family: "Fraunces", serif;
-    font-size: 2rem;
+    font-weight: 900;
+    font-size: 1.8rem;
     text-align: center;
-    margin: 4rem 0 1.5rem 0; }
+    margin: 4rem 0 1.55rem 0;
+    font-size: 1.55rem; }
   #design p {
     font-family: "Barlow", sans-serif;
     color: #25564b;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
-    line-height: 2;
+    line-height: 1.65rem;
     margin: 0;
-    line-height: 1.5; }
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 0.88rem;
+    font-weight: 600; }
 
 #photography {
   position: relative;
   height: 600px;
   justify-content: flex-end;
-  padding: 2rem 0.5rem; }
+  padding: 3.5rem 1.33rem; }
   #photography img {
     position: absolute;
     top: 0;
@@ -207,35 +226,133 @@ img {
   #photography h2 {
     color: #19536b;
     font-family: "Fraunces", serif;
-    font-size: 2rem;
+    font-weight: 900;
+    font-size: 1.8rem;
     text-align: center;
-    margin: 4rem 0 1.5rem 0; }
+    margin: 4rem 0 1.55rem 0;
+    font-size: 1.55rem; }
   #photography p {
     font-family: "Barlow", sans-serif;
     color: #19536b;
     font-size: 1rem;
     font-weight: 500;
     text-align: center;
-    line-height: 2;
+    line-height: 1.65rem;
     margin: 0;
-    line-height: 1.5; }
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: 0.88rem;
+    font-weight: 600; }
 
-#reviews h3 {
-  font-family: "Fraunces", serif;
-  text-transform: uppercase;
-  font-size: 1rem;
-  margin: 4rem 1rem;
-  text-align: center;
-  letter-spacing: 0.2rem;
-  color: #a7abae; }
-#reviews blockquote {
+#reviews {
+  display: flex;
+  flex-wrap: wrap; }
+  #reviews h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.88rem;
+    margin: 4rem 1rem;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: #a7abae; }
+  #reviews blockquote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Barlow", sans-serif;
+    color: #5a636c;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.65rem;
+    margin: 0;
+    text-align: center;
+    margin-bottom: 3rem; }
+  #reviews img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    margin-bottom: 2rem; }
+  #reviews span {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    color: #23303e; }
+  #reviews cite {
+    font-family: "Barlow", sans-serif;
+    font-weight: 600;
+    font-size: 0.78rem;
+    color: #a7abae;
+    font-style: normal; }
+
+#gallery {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 0; }
+  #gallery picture {
+    display: block;
+    margin: 0;
+    padding: 0;
+    max-width: 50%;
+    height: 100%; }
+  #gallery source {
+    display: block;
+    height: 0; }
+  #gallery img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-style: none; }
+  @media screen and (min-width: 750px) {
+    #gallery picture {
+      max-width: 25%; } }
+
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
-#reviews img {
-  width: 4rem;
-  height: 4rem;
-  border-radius: 50%; }
+  align-items: center;
+  background-color: #91d4c7;
+  padding-bottom: 0.8rem; }
+  footer .logo {
+    margin: 3rem 0 2rem 0;
+    width: 9.4rem;
+    height: 2rem; }
+  footer ul {
+    width: 80%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3rem 0;
+    padding: 0; }
+  footer .logo-list {
+    margin-top: 1rem;
+    justify-content: center;
+    column-gap: 10%; }
+  footer li {
+    font-size: 1rem;
+    color: #458c7d;
+    margin-left: 0;
+    font-family: "Barlow", sans-serif;
+    font-weight: 600; }
+  footer li:last-child {
+    margin-right: 0; }
+  footer .attribution {
+    color: #25564b;
+    font-family: "Barlow", sans-serif;
+    margin: 0 0.8rem;
+    font-size: 0.7rem; }
+    footer .attribution a {
+      text-decoration: none;
+      color: #23303e;
+      font-family: "Fraunces", serif;
+      font-weight: 600; }
 
 /*# sourceMappingURL=style.css.map */
