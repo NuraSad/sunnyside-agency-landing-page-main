@@ -45,6 +45,8 @@ $start-div-padding-left: 1.3rem;
     text-transform: uppercase;
     margin: 1.55rem 0 3rem 0;
     position: relative;
+    cursor: pointer;
+    
 }
 
 @mixin linksUnderline($color) {
@@ -63,7 +65,8 @@ $start-div-padding-left: 1.3rem;
 
 @mixin sectionImage {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 @mixin backgroundImage{
@@ -72,7 +75,8 @@ $start-div-padding-left: 1.3rem;
     left: 0;
     z-index: -2;
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -114,6 +118,8 @@ section {
         position: absolute;
         top: 1.8rem;
         left: 2rem;
+        width: 6.88rem;
+        height: 1.33rem;
     }
 
     #hamburger {
@@ -202,6 +208,73 @@ section {
             margin: 0.8rem 0;
         }
     }
+
+    @media screen and (min-width: 750px) {
+
+            height: 100vh;
+            padding: 1.88rem 2.22rem;
+
+            h1 {
+                font-size: 3.1rem;
+            }
+
+            .logo {
+                width: 9.44rem;
+                height: 2rem;
+                top: 1.5rem;
+                left: 2.22rem;
+                transform: translateY(50%);
+            }
+
+            #hamburger {
+                display: none;
+            }
+            nav {
+                display: flex;
+                justify-content: flex-end;
+                align-items: flex-start;
+                width: 100%;
+                padding: 0;
+
+                #navbar {
+                    position: initial;
+                    background-color: transparent;
+                    flex-direction: row;
+                    column-gap: 2.5rem;
+                    width: min-content;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        margin: 0;
+                        font-size: 1rem;
+                        color: white;
+                    }
+
+                    button {
+                        background-color: white;
+                        margin: 0;
+                        cursor: pointer;
+                    }
+                    button:hover {
+                        background-color:hsla(0, 0%, 100%, 0.253);
+                        color: white;
+                    }
+                }
+
+            }
+
+            .arrow-icon {
+                top: 45%;
+            }
+
+
+      }
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
 }
 
 img {
@@ -209,6 +282,7 @@ img {
 }
 
 #transform {
+
     h2 {
         @include sectionHeading($color: $very-dark-desaturated-blue);
     }
@@ -225,9 +299,44 @@ img {
         @include linksUnderline($color: $pale-yellow)
 
     }
+
+    a:hover::after {
+        @include linksUnderline($color: $yellow)
+    }
+
+    @media screen and (min-width: 750px) {
+        grid-column: 1;
+        grid-row: 1;
+        width: 70%;
+        align-items: flex-start;
+        justify-content: center;
+        margin: auto;
+
+        h2 {
+            font-size: 2.22rem;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+    }
 }
 
+.container:nth-of-type(2){
+    @media screen and (min-width: 750px) {
+
+    picture{
+        grid-column: 2;
+    }
+}
+} 
+
+
 #stand-out {
+   
     h2 {
         @include sectionHeading($color: $very-dark-desaturated-blue);
     }
@@ -244,6 +353,29 @@ img {
         @include linksUnderline($color: $pale-soft-red);
 
     }
+
+    a:hover::after {
+        @include linksUnderline($color: $soft-red)
+    }
+
+    @media screen and (min-width: 750px) {
+        width: 70%;
+        align-items: flex-start;
+        justify-content: center;
+        margin: auto;
+
+        h2 {
+            font-size: 2.22rem;
+            text-align: left;
+        }
+
+        p {
+            text-align: left;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+        }
+    }
+
 }
 
 #design {
@@ -268,6 +400,12 @@ img {
         font-size: 0.88rem;
         font-weight: 600;
     }
+
+    @media screen and (min-width: 750px) {
+        p {
+            width: 60%;
+        }
+    }
 }
 
 #photography {
@@ -291,15 +429,24 @@ img {
         font-size: 0.88rem;
         font-weight: 600;
     }
+
+    @media screen and (min-width: 750px) {
+        p {
+            width: 56%;
+        }
+    }
 }
 
 #reviews {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    column-gap: 1.8rem;
 
     h3 {
         font-family: $headings-font-style;
         font-weight: 900;
+        width: 100%;
         text-transform: uppercase;
         font-size: 0.88rem;
         margin: 4rem 1rem;
@@ -315,6 +462,7 @@ img {
         align-items: center;
         @include text($color: $very-dark-grayish-blue);
         margin-bottom: 3rem;
+        width: 350px;
 
     }
 
@@ -339,6 +487,19 @@ img {
         font-size: 0.78rem;
         color: $grayish-blue;
         font-style: normal;
+    }
+
+    @media screen and (min-width: 750px) {
+        padding: 7rem 0;
+
+        h3 {
+            font-size: 1.11rem;
+            margin: 0 0 4rem 0;
+        }
+
+        span {
+            margin-top: 4rem;
+        }
     }
 
 }
@@ -415,10 +576,19 @@ footer {
         margin-left: 0;
         font-family: $text-font-style;
         font-weight: 600;
+        cursor: pointer;
     }
 
     li:last-child{
         margin-right: 0;
+    }
+
+    li:hover {
+        color: white;
+
+        path {
+            fill: white;
+        }
     }
 
     .attribution {
@@ -432,6 +602,22 @@ footer {
             color:hsl(212, 27%, 19%);
             font-family: $headings-font-style;
             font-weight: 600;
+        }
+    }
+
+    @media screen and (min-width: 750px) {
+
+        .logo {
+            margin: 4rem 0 2rem 0;
+        }
+
+        ul {
+            width: 20%;
+            margin-bottom: 4rem;
+        }
+
+        .logo-list {
+            width: 20%;
         }
     }
 
