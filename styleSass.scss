@@ -382,12 +382,13 @@ img {
 #design {
 
     position: relative;
-    height: 600px;
+    height: 75vh;
     justify-content: flex-end;
     padding: 3.5rem 1.33rem;
 
     img {
         @include backgroundImage;
+        
     }
 
     h2 {
@@ -406,12 +407,13 @@ img {
         p {
             width: 60%;
         }
+        
     }
 }
 
 #photography {
     position: relative;
-    height: 600px;
+    height: 75vh;
     justify-content: flex-end;
     padding: 3.5rem 1.33rem;
 
@@ -435,6 +437,7 @@ img {
         p {
             width: 56%;
         }
+        
     }
 }
 
