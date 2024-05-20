@@ -24,13 +24,19 @@ Users should be able to:
 
 ### Screenshot
 
-Mobile views:
+Mobile drop-down menu:
 
-![](./mobile-menu.jpg)
+![](./mobile-menu.png)
+
+Mobile footer: 
+
 ![](./mobile-footer.png)
 
-Desktop views:
-![](./desktop.jpg)
+Desktop view:
+![](./desktop.html.png)
+
+Desktop footer: 
+
 ![](./desktop-footer.png)
 
 ### Links
@@ -53,7 +59,7 @@ Desktop views:
 I took this challenge as an opportunity to learn Sass, a CSS preprocessor. One of the primary advantages of Sass is that it makes writing CSS more readable and manageable. For instance, the application uses two primary fonts for headings and text, and declaring them as variables streamlines the process. During development, I learned how to use @mixin for theme declaration. This was particularly useful because several elements on the webpage shared the same style, but with different properties such as font size or color. Mixins allowed me to pass color as a variable, making my CSS code more DRY (Don't Repeat Yourself). Overall, I enjoyed working with Sass and plan to continue using it in my projects.
 For this project, I adopted a mobile-first workflow to ensure a smooth transition to the desktop version. I employed two techniques:
 
-1. I used the <picture> HTML element instead of <img>. This allowed me to leverage the 'srcset' attribute of the <picture> tag, enabling different image sources for the picture element depending on the user's device width. Consequently, the browser utilized optimized images for both mobile and desktop devices.
+1. I used the picture HTML element instead of img. This allowed me to leverage the 'srcset' attribute of the picture tag, enabling different image sources for the picture element depending on the user's device width. Consequently, the browser utilized optimized images for both mobile and desktop devices.
 2. The webpage features slightly different layouts for mobile and desktop versions. On mobile, each section takes the full width of the screen, and the gallery at the bottom displays four images. In contrast, the desktop version arranges sections in pairs, with the gallery occupying a single row. To achieve this, I used CSS Grid with the auto column property:
 
 ```
